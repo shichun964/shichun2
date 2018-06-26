@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var a = [11 ,35, 59, 47, 23];
+		for(var i = 0; i < a.length - 1; i++){
+			for(var j = 0; j <  a.length - 1 - i; j++){
+				if(a[j] > a[j + 1]){
+					var tmp = a[j];
+					a[j] = a[j + 1];
+					a[j + 1] = tmp;
+				}
+			}
+		}
+		console.log(a);
+
+   		 var a = [11 ,35, 59, 47, 23];
+		for(var i = 0; i < a.length - 1; i++){
+		  var isSort = true;
+			for(var j = 0; j <  a.length - 1 - i; j++){			
+				if(a[j] > a[j + 1]){
+				  var isSort = false;
+					var tmp = a[j];
+					a[j] = a[j + 1];
+					a[j + 1] = tmp;
+				}
+			}
+			if(isSort){
+				break;
+			}
+		}
+		console.log(a);
+
+	
+		//开关
+        // 1. 定义一个默认值
+        // 2. 满足条件修改这个默认值
+        // 3. 判断是否还是我定义的默认值
+        var flag = true   // 默认今天是晴天
+
+        if (5555) {
+            flag = false
+        }
+
+        if (flag) {
+            console.log('今天是晴天')
+        } else {
+            console.log('今天是下雨天')
+        }
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

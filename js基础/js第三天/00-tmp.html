@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=viewport"X-UA-Compatible" content="ie=edge">
+    <title>js第3天</title>
+</head>
+<body>
+    <script>
+        // 1. for
+        /* for (var i = 0; i < 100; i++) {
+            // 循环体
+        } */
+        // 2. 打印正方形
+       /*  var str = ''
+        for (var j = 0; j < 10; j++) {     // 控制多少行
+            for (var i = 0; i < 10; i++) { // 控制一行有多少个*
+                str += '* '
+            }
+            str += '\n' // * * * * * * * * * *\n
+        }
+        console.log(str) */
+        // 3. 打印倒三角形
+        // var str = ''
+        /* for (var j = 0; j < 10; j++) {     // 控制多少行
+            for (var i = 0; i < 10 - j; i++) { // 控制一行有多少个*
+                str += '* '
+            }
+            str += '\n' // * * * * * * * * * *\n
+        } */
+        /* for (var j = 0; j < 10; j++) {     // 控制多少行
+            for (var i = j; i < 10; i++) { // 控制一行有多少个*
+                str += '* '
+            }
+            str += '\n' // * * * * * * * * * *\n
+        } */
+        /* for (var j = 1; j < 10; j++) {     // 控制多少行
+            for (var i = 0; i < j; i++) { // 控制一行有多少个*
+                str += '* '
+            }
+            str += '\n' // * * * * * * * * * *\n
+        } */
+        // console.log(str)
+        // 4. 打印99乘法表
+        /* var str = ''
+        for (var j = 1; j < 10; j++) {     // 控制多少行
+            for (var i = j; i < 10; i++) { // 控制一行有多少个*
+                // str += '* '
+                str += j + '*' + i + '=' + j * i + '\t'
+            }
+            str += '\n' // * * * * * * * * * *\n
+        }
+        console.log(str) */
+        // 5. 附加题可以先思考本金10000元存入银行，年利率是千分之三，每过1年，将本金和利息相加作为新的本金。计算5年后，获得的本金是多少？
+        // 第1年 10000 * 0.003 + 10000 = 10030
+        // 第2年 10030 * 0.003 + 10030 = 10060.09
+        /* var money = 10000
+        for (var i = 0; i < 1; i++) {
+            money = money * (1 + 0.003)
+        }
+        console.log(money) */
+        // 6. 附加题可以先思考有个人想知道，一年之内一对兔子能繁殖多少对？于是就筑了一道围墙把一对兔子关在里面。已知一对兔子每个月可以生一对小兔子，而一对兔子从出生后第3个月起每月生一对小兔子。假如一年内没有发生死亡现象，那么，一对兔子一年内（12个月）能繁殖成多少对？（兔子的规律为数列，1，1，2，3，5，8，13，21）
+        /* var n1 = 1
+        var n2 = 1
+        var n3
+        for (var i = 3; i < 8; i++) {
+            n3 = n2 + n1 
+            n1 = n2
+            n2 = n3
+        }
+        console.log(n3) */
+        // 7. 数组相关操作
+        // 什么是数组？ 数的组合  现在我们可以用变量存储一组数据
+        var arr1 = [45, 'dfd']
+        var arr2 = new Array(65, 'ghg')
+        console.log(arr1, arr2)
+        // 修个数组中数据   数组中索引从0 开始
+        console.log(arr1[0])  // 45
+
+        var arr3 = []  // arr3[0] = 45; arr3[1] = 66
+        // 数组长度 arr.length
+        for (var j = 0; j < arr1.length; j++) {
+            arr3[j] = arr1[j]
+        }
+        console.log(arr3)
+        // 8. 求一组数中的总和及平均值
+        // 9. 求数组中的最大值和最小值
+        // 10. 求数组中的最大值和最小值
+        // 11. 将var names = ['郭德纲', '郭麒麟', '于谦', '岳云鹏', '烧饼']用分隔符转换成  "郭德纲|郭麒麟|于谦|岳云鹏|烧饼"
+        // 12. break和continue
+
+        // break是跳出整个循环 continue是跳出当前这一次循环继续下一次循环
+        var val = 10
+        for (var i = 0; i < 11 ; i++) {
+            if (i === val) {
+                // break
+                continue
+            }
+            console.log(i)
+        }
+        
+        var names = ['郭德纲', '郭麒麟', '于谦', '岳云鹏', '烧饼']  // 用分隔符转换成  "郭德纲|郭麒麟|于谦|岳云鹏|烧饼"
+        var result = names.join('|')
+        console.log(result)
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 函数语法
+		function wed () {
+			var sum = 0;
+			for(var i = 0; i <= 100; i++){
+				if(i % 2 === 1){
+					sum += i;
+				}
+			}
+			console.log(sum);
+		}
+		wed();
+		
+		var get = function(){
+			for(var i = 0; i <= 10; i++){
+				console.log(i);
+			}
+		}
+		get();
+		// 函数参数
+		function mag (n,m){
+			var sum = 0;
+			for(var i = n; i <= m; i++){
+				if(i % 7 !== 0){
+					sum += i;
+				}
+			}
+			console.log(sum);
+		}
+		mag(1,100);
+		mag(100,999);
+		
+		function mbg (r){
+			var PI = 3.14159;
+			var s = PI * r * r;
+			console.log(s);
+		}
+		mbg(11);
+
+		function name(m) {
+			var flag = true;
+			for(var i = 2; i < m; i++){
+				if(m % i === 0){
+					flag = false;
+					break;
+				}
+			}
+			if(flag){
+				console.log('m是素数');
+			}
+		}
+		name(5);
+		// 求5*4*3*2*1的阶乘
+		function JieCheng(n){
+			sum = 1;
+			for(var i = 1 ; i <= n; i++){
+				sum *= i;
+			}
+			console.log(sum);
+		}
+		JieCheng(5);
+		
+		function mcg(m){
+			sum = 1;
+			for(j = 1; j <= m; j++){
+				sum *= j;
+			}
+			return sum;
+		}
+		var sum1 = mcg(5);
+		console.log(sum1); 
+		// 求1!+2!+3!+....+n!
+		function a(n){
+			a1 = 1;
+			for(i = 1; i <= n; i++){
+				a1 *= i;
+			}
+			return a1;
+		}
+		function b(m){
+			b1 =0;
+			for(var j =1; j <= m; j++){
+				b1 += a(j);
+			}
+			return b1;
+		}
+		console.log(b(5));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

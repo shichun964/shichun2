@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=viewport"X-UA-Compatible" content="ie=edge">
+    <title>js第3天</title>
+</head>
+<body>
+    <script>
+        // 1. 数组
+        // 定义数组
+        /* var arr1 = [555]
+        var arr2 = new Array(666) */
+        // 数组的增删查改
+        /* var arr3 = [55]
+        arr3[arr3.length] = 66   // 增
+        console.log(arr3[0])     // 查
+        arr3[0] = 0710           // 改 */
+        // 遍历数组
+        /* var arr4 = [027, 021, 0710, 9527]
+        for (var i = 0; i < arr4.length; i++) {
+            console.log(arr4[i])
+        } */
+
+        // 分隔符
+        /* var arr5 = ['枣阳', '襄阳', '桃之乡']
+        var rr = arr5.join('|')
+        console.log(rr) */
+
+        // 2. 函数  --- 实现 一次封装多次调用 --- 
+        // 2.1 函数定义   
+        /* function fn1 () {}  // 可以先调用 后定义
+        var fn2 = function () {} // 只能定义后调用 */
+
+        // 2.2 函数参数   形参--> 形式参数(函数定义时候括号里面的参数)  实参--函数调用的时候传递的参数(调用括号里面传递的参数)
+        /* function fn3 (n, m) {  // 求n-m之间所有数 的和
+            var sum = 0
+            for (var i = n; i < m; i++) {
+                sum += i
+            }
+            console.log(sum)
+        }
+        fn3(101, 2018, 666) */
+
+        // 2.3 函数中的返回值
+        /* function fn3 (n, m) {  // 求n-m之间所有数 的和
+            var sum = 0
+            for (var i = n; i < m; i++) {
+                sum += i
+            }
+            // console.log(sum)
+            return sum
+            console.log('你真是帅啊 ....')
+        }
+        var xx = fn3(101, 2018, 666)
+        console.log(xx) */
+
+
+        // return 总结 
+        // 1. return 返回函数中的值
+        // 2. return 跳出函数---> return之后的代码不会执行啦
+        // 3. 如果没有return 函数默认会返回undefined
+        // 4. 如果你不需要返回值，那么你就直接调用函数即可，不需要用变量或什么接收他的一个返回值
+        // 5. console.log(fn()) 第一步 调用fn  第二步 打印他的返回值
+    </script>
+</body>
+</html>

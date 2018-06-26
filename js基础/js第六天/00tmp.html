@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    // 1. date日期对象  --> 实例成员 new
+    var t1 = new Date()
+    var t2 = new Date('2018-11-11')
+    var t3 = new Date(1524617884026)
+    // 获取时间戳 获取毫秒
+    var ms1 = t1.getTime()
+    var ms2 = +t1
+    // 日期格式化
+    var formdate1 = t1.toLocaleDateString()
+    var formdate2 = t1.toLocaleTimeString()
+
+    // 写一个指定格式的日期格式化方法  yyyy-MM-dd HH:mm:ss
+    function formDate (t) {
+        // console.log(t)
+        // if (!(t instanceof Date)) {
+        if (!(Object.prototype.toString.call(t) === '[object Date]')) {
+            console.error('请输入日期对象');
+            return
+        }
+        var y, m, d, h, m, s;
+        y = t.getFullYear()
+        m = t.getMonth() < 10 ? '0' + t.getMonth() : t.getMonth()
+        d = t.getDate() < 10 ? '0' + t.getDate() : t.getDate()
+        h = t.getHours() < 10 ? '0' + t.getHours() : t.getHours()
+        m = t.getMinutes() < 10 ? '0' + t.getMinutes() : t.getMinutes()
+        s = t.getSeconds() < 10 ? '0' + t.getSeconds() : t.getSeconds()
+
+        var str = y + '-' + m + '-' + d + ' ' + h + ':' + m + ':'+ s
+        return str
+    }
+    var result = formDate(t1)
+    console.log(result)
+    // 2. 数组常用方法
+    // 从最后添加和删除
+    var arr1 = [66, 77, 88]
+    arr1.push(99) // [66, 77, 88, 99]  // 
+    console.log(arr1)
+    arr1.pop()   // [66, 77, 88]
+    console.log(arr1)
+    // 从最前删除和添加
+    arr1.unshift(55)  // 从最前面添加
+    console.log(arr1)
+    arr1.shift()
+    console.log(arr1)
+
+    // sort排序
+    var arr2 = [12, 65, 32, 21, 999, 12]
+    var newArr = arr2.sort(function(a, b) {
+        return a - b
+    })
+    console.log(newArr)
+
+    // 翻转
+    var newArr = arr2.reverse()
+    console.log(newArr)
+
+    // 作业
+    // 1. 使用push将arr3 = [45, 32, 64, 32, 12, 99]中的每一项添加到新数组中
+   /*  var arr3 = [45, 32, 64, 32, 12, 99]
+    var arr4 = []
+    for (var i = 0; i < arr3.length; i++) {
+        console.log(arr3[i])
+        // arr4[arr4.length] = arr3[i]
+        arr4.push(arr3[i])
+    } */
+
+    // 2. 将上题中的除了数组中除了值为32添加到新数组中
+    var arr3 = [45, 32, 64, 32, 12, 99]
+    var arr4 = []
+    for (var i = 0; i < arr3.length; i++) {
+        console.log(arr3[i])
+        // arr4[arr4.length] = arr3[i]
+        /* if (arr3[i] === 32) {
+            continue
+        }
+        arr4.push(arr3[i]) */
+        if (arr3[i] !== 32) {
+            arr4.push(arr3[i])
+        }
+    } 
+</script>

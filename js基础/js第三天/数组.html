@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var names = [1, 'sc', true, '', 0];
+		console.log(names[1]);
+		console.log(names.length);
+		console.log(names[names.length - 1]);
+		names[1] = 2;
+		console.log(names);
+		//遍历数组
+		var names = [1, 'sc', true, '', 0];
+		for(var i = 0; i < names.length; i++){
+			console.log(names[i]);
+		}
+		for(var i = names.length - 1; i >= 0; i--){
+			console.log(names[i]);
+		}
+		//补充数组
+		var a = [];
+		for(var i = 0; i < 10; i++){
+			a[i] = i;
+		}
+		console.log(a);
+		//清空数组
+		a.length = 0;
+		console.log(a);
+		//求平均值
+		var numbers = [65, 13, 101, 88, 10, 25];
+		var sum = 0;
+		for(i = 0; i < numbers.length; i++){
+			// console.log(numbers[i]);
+			sum += numbers[i];
+		}
+		console.log(sum);
+		console.log(sum / numbers.length);
+		//求最大值最小值和最大值最小值的下标
+		var number = [65, 13, 101, 88, 10, 25];
+		var max = number[0];
+		var min = number[0];
+		var maxIndex = 0;
+		var minIndex = 0;
+		for(var a = 0; a < number.length; a++){
+			if(number[a] > max){
+				max = number[a];
+				maxIndex = a;
+			}	
+			if(number[a] < min){
+				min = number[a];
+				minIndex = a;
+			}
+		}
+		console.log(max,min);
+		console.log(maxIndex,minIndex);
+		//分隔符
+		var a = ['郭德纲', '郭麒麟', '于谦', '岳云鹏', '烧饼'];
+		var b = ['郭德纲'];
+		var c = '|';
+		for(var i = 1; i < a.length; i++){
+			b +=  c + a[i];
+		}
+		console.log(b);
+		//筛选数组
+		var ner = [0, 12, 34, 0, 11, 9, 0];
+		var newArray = [];
+		for(var i = 0; i < ner.length; i++){
+			if(ner[i] !== 0){
+				newArray[newArray.length] = ner[i];
+			}
+		}
+		console.log(newArray);
+		//翻转数组
+		var number = [0, 1, 2, 3, 4];
+		var a = [];
+		for(i = number.length - 1; i >= 0; i--){
+			a[a.length] = number[i];
+		}
+		console.log(a);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

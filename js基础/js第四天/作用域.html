@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 局部作用域
+		// function fn(){
+		// 	 sum = 'abcd';
+		// }
+		// fn();
+		
+		// 全局作用域
+		var a = 'shi';
+		function f(){
+			console.log(a);
+		}
+		console.log(a);
+
+		var a = 10;
+		function fnn(){
+			var a = 20;
+			console.log(a);
+			var dd = function(){
+				var c = 30;
+				console.log(a);
+			}
+			dd();
+		}
+		fnn();
+		console.log(a);
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

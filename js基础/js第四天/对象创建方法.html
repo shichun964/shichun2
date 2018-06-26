@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 1.对象的字面量
+		var  hero = {
+			name : '赵云',
+			weapon : '龙胆亮银枪',
+			equipment: ['照夜玉狮子', '青釭剑'],
+			blood: 100,
+			attack: function() {
+				console.log(this.name +':看枪');
+			},
+			run: function() {
+				console.log(this.name +':哪里走');
+			},
+		}
+		console.log(hero.name);
+		console.log(hero.equipment);
+		hero.attack();
+		hero.run();
+		// 2.new Object
+		var hero1 = Object();
+		hero1.name = '关羽';
+		hero1.weapon = '青龙偃月刀';
+		hero1.equipment = ['赤兔'];
+		hero1.blood = 100;
+		hero1.attack = function(){
+			console.log(this.name + ':插标卖鼠之辈');
+		}
+		var fn = function(){
+			console.log(hero1);
+		}
+		fn()
+		// 3.工厂方法
+		function createHero(name, weapon, equipment, blood){
+			var hero2 =Object();
+			hero2.name = name;
+			hero2.weapon = weapon;
+			hero2.equipment = equipment;
+			hero2.blood = blood;
+			hero2.attack = function(){
+				console.log(this.name + ':进攻');
+			}
+			return hero2;
+		}
+		var hero2a = createHero('张飞' ,'丈八蛇矛', ['明光铠','中原一点红'], 100);
+		console.log(hero2a);
+		// 4.自定义构造函数
+		function Hero(name, weapon, equipment, blood){
+			this.name = name;
+			this.weapon = weapon;
+			this.equipment = equipment;
+			this.blood = blood;
+			this.attack = function(){
+				console.log(this.name + ':杀');
+			}
+		}
+		var hero3 = new Hero('刘备', '双股剑', '的卢', '100');
+		console.log(hero3);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 1. 用函数求数组中的最大值 var arr = [45, 66,98, 54, 33, 105, 23, 3]
+		var arr = [45, 66,98, 54, 33, 105, 23, 3];
+		function get(arr){
+			var max = arr[0];
+			for(var i = 0; i < arr.length; i++){
+				if(max < arr[i]){
+					max = arr[i];
+				}
+			}
+			console.log(max);
+		}
+		get(arr);
+
+		function getMax(arr){
+			var max = arr[0];
+			for(var j = 0; j < arr.length; j++){
+				if(max < arr[j]){
+					max = arr[j];
+				}
+			}
+			return max;
+		}
+		var array = [45, 66,98, 54, 33, 105, 23, 3];
+		var max = getMax(array);
+		console.log(max);
+		// 2. 翻转数组-->并尝试用函数完成
+		var b = [1, 2, 3, 4];
+		function mag(b){
+			var a =[];
+			for(var i = b.length - 1 ; i >= 0; i--){
+				a[a.length] = b[i];
+			}
+			console.log(a);
+		}
+		mag(b);
+
+		function mbg(c){
+			var a1 = [];
+			for(var j = c.length - 1; j >= 0; j--){
+				a1[a1.length] = c[j];
+			}
+			return a1;
+		}
+		var b1 = [11, 22, 33, 44];
+		var a1 = mbg(b1);
+		console.log(a1);
+		// 3. 输入一个年份，判断是否是闰年[闰年：1.能被4整数并且不能被100整数，或者2.能被400整数]
+		function meg(n){
+				if(n % 4 === 0 && n % 100 !== 0 || n % 400 === 0){
+				console.log('闰年');
+			} else{
+				console.log('平年');
+			}
+		}
+		meg(2018);
+		meg(2012);
+		// // 4. 输入某年某月某日，判断这一天是这一年的第几天？
+		   function IsRun(year){
+		   	var result = false;
+		   	if(year % 4 ===0 && year % 100 !== 0 || year % 400 === 0){
+		   		result = true;
+		   	}
+		   	return result;
+		   }
+		  function getDays(year,month,day){
+		  	var days = day;
+		  	for(var i = 1; i < month; i++){
+		  		if(i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12){
+		  			days += 31;
+		  		} else if(i == 4 || i == 6 || i == 9 || i == 11){
+		  			days += 30;
+		  		} else if(i == 2){
+		  			if(IsRun(year)){
+		  				days += 29;
+		  			} else{
+		  				days +=28;
+		  			}
+		  		}
+		  	}
+		  	return days;
+		  }
+		  console.log(getDays(2018, 4, 21));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

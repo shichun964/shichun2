@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 日期构造函数 Date()的传值有4种
+		// 1.空构造函数 获取的是当前时间对象
+		var a = new Date();
+		console.log(a);
+		console.log(a.valueOf());
+		// 2.构造函数中传入 毫秒值
+		var a = new Date(1502088177998);
+		console.log(a);
+		// 3.可以传入日期形式的字符串
+		var a =new Date('1998-8-8 8:8:8');
+		console.log(a);
+		console.log(a.valueOf());
+		// 4.可以传入数字
+		var a = new Date(1994,1,4);
+		console.log(a);
+		console.log(a.valueOf());
+		
+		
+		// 获取日期对象的毫秒值 var d = new Date();
+		// 1.获取日期对象的毫秒值 不用我们调用
+		console.log(a.valueOf());
+		console.log(a.getTime());
+		// 2.获取当前时间的毫秒值 静态成员
+		var num = Date.now();
+		console.log(num);
+		// 3.+在这里是取正
+		var num = + new Date();
+		console.log(num);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

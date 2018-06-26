@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 遍历对象
+		var a = {
+			name : 'sc',
+			age : 24,
+			sex : '男',
+			fn : function(){
+				console.log(this.name + ':你好');
+			}
+		}
+		for(var key in a){
+			console.log(key + '---' + a[key]);
+		}
+		// 2.添加对象
+		var b ={}
+		for(i = 0; i < 10; i++){
+			b['c' + i] = i * 2;
+		}
+		for(var key in b){
+			console.log(key + '---' + b[key]);
+		}
+		// 3. 删除属性   delete 删除对象的成员
+		delete a.name;
+		console.log(a.name);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

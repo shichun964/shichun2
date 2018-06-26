@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// var bmw = {
+		// 	color: 'white',
+		// 	mony: '100万',
+		// 	run: function(){
+		// 		console.log(this);
+		// 		console.log(this.color);
+		// 		console.log('我百公里加速3s');
+		// 	}
+		// } 
+		// var a = bmw.color;
+		// console.log(a);
+		// // var b = bmw.run;
+		// // console.log(b);
+		// //==> var b = function(){方法console.log('我百公里加速3s')}
+		// // b()
+		// bmw.run()
+
+		var student = {
+	      name: '张飞',
+	      age: 18,
+	      sex: '男',
+	      sayHi: function () {
+	      	console.log(this);
+	        console.log('hello');
+	      }
+	    }
+	    var c = student.name;
+	    console.log(c);
+	    student.sayHi();
+	    // new操作符做了什么？
+        // new会在内存中创建一个新的空对象
+        // new 会让this指向这个新的对象
+        // 执行构造函数 目的：给这个新对象加属性和方法
+        // new会返回这个新对象
+        // 【补充先了解】内部原型指向构造函数的原型
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

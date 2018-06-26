@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+
+		var arr = ["张三","李四","王五","赵六","H5","CSS3"];
+		arr.splice(2, 2, 'abc');
+		console.log(arr);
+		var a = arr.join('|');
+		console.log(a);
+	
+		// filter过滤的意思
+		var arr1 = [1500, 1200, 2000, 2100, 1800];
+		var arr2 = arr1.filter(function(item){
+			return item < 2000
+		})
+		console.log(arr2);
+
+		var arr3 = ['a', 'd', 'f', 'a', 's', 'a'];
+		var arr4 = arr3.indexOf('a');  //从前开始找
+		console.log(arr4);
+		var arr5 = arr3.lastIndexOf('a');  //从后开始找
+		console.log(arr5);
+
+		var array = [10, 20, 10, 30, 20, 20, 30, 66];
+		var array1 = [];
+		for(i = 0; i < array.length; i++){
+			if(array1.indexOf(array[i]) === -1){
+				array1.push(array[i]);
+			}
+		}
+		console.log(array1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html> 

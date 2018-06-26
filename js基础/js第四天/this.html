@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 1 函数中   --  this 指向Window
+		function fn(){
+			console.log(this);
+
+		}
+		fn();
+		// 2 在方法中  --  this  指向的是这个方法所属的对象
+		var a = {
+			name : 'sc',
+			fn1 : function(){
+				console.log(this)
+			}
+		}
+		a.fn1()
+		// 3 构造函数中  -- this 就是构造函数创建的对象
+		function Fn(){
+			this.name = 'sc';
+			this.age = 24 ;
+			this.sex = '男';
+			console.log(this);
+		}
+		var b = new Fn();
+		Fn();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

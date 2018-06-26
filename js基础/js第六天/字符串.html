@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 获取指定位置处字符
+		var a = 'abcdef';
+		console.log(a.charAt(3));
+		console.log(a.charCodeAt(0));
+	   
+		// 截取字符串
+		var b = '我爱中华人民共和国';
+		var b1 = b. substr(2, 2);
+		console.log(b1);
+		var b2 = b.slice(2, 3);
+		console.log(b2);
+		var b3 = b.substring(3, 4);
+		console.log(b3);
+
+		
+		// 字符串替换
+		var s = 'abcoefoxyozzopp';
+		 for(i = 0; i < s.length; i++){
+		 	if(s[i] === 'o'){
+		 		 s = s.replace('o', '@');
+		 	}
+		 }
+		console.log(s);
+		var ss = s.replace(/o/g, '@');
+		console.log(ss);
+       
+        // 把字符串中的所有空白去掉
+        var s = ' abc xyz a 123 ';
+		var arr = s.split(' ');
+		console.log(arr.join(''));
+		var arr1 = s.replace(/\s*/g, '');
+		console.log(arr1)
+
+		var s = 'abcoefoxyozzopp';
+		var ch;
+		var num;
+		var o = {};
+		for(i = 0; i < s.length; i++){
+			var c = s.charAt(i);
+			if(o[c]){
+				o[c]++;
+			} else{
+				o[c] = 1;
+			}
+		}
+		num = 1;
+		for(var key in o){
+			if(num < o[key]){
+				num = o[key];
+				ch = key;
+			}
+		}
+		console.log(num);
+		console.log(ch); 
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

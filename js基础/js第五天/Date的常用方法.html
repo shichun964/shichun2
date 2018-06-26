@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var a = new Date(2018,3,24);
+		console.log(a.getFullYear());
+		console.log(a.getMonth());
+		console.log(a.getDate());
+		console.log(a.getHours());
+		console.log(a.getMinutes());
+		console.log(a.getSeconds());
+
+
+		function formatDate(date){
+			if(!(date instanceof Date)){
+				console.error('date不是日期对象');
+				return;
+			}
+			var year = date.getFullYear(),
+			month = date.getMonth() + 1,
+			day = date.getDate(),
+			hour = date.getHours(),
+			minute = date.getMinutes(),
+			second = date.getSeconds();
+
+			month = month < 10 ? '0' + month : month;
+			day = day < 10 ? '0' + day : day;
+			hour = hour < 10 ? '0' + hour : hour;
+			minute = minute < 10 ? '0' + minute : minute;
+			second = second < 10 ? '0' + second : second;
+			return year + '-' + month + '-' + day + '  ' + hour + ':' + minute + ':' +second 
+		}
+		var b = new Date();
+		var c = formatDate(b);
+		console.log(c);
+		var d = new Date('2018-4-24');
+		var c =formatDate(d);
+		console.log(c);
+
+		function getInterval(start, end){
+		    interval = end - start;
+		    var day, hour, minute, second;
+		    interval /= 1000;	
+		    day = Math.floor(interval / 60 / 60 / 24);
+		    hour = Math.floor(interval / 60 / 60 % 24);
+		    minute = Math.floor(interval / 60 % 60);
+		    second = Math.floor(interval % 60);
+		    return{
+		    	day: day,
+		    	hour: hour,
+		    	minute: minute,
+		    	second: second
+		    }
+		}
+		var b1 = new Date();
+		var b2 = new Date('2018-10-1');
+		console.log(getInterval(b1 , b2));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
